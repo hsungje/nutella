@@ -1,1 +1,2 @@
 # nutella
+`npm install`
