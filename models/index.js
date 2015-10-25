@@ -5,7 +5,6 @@ var path      = require("path");
 var Sequelize = require("sequelize");
 var env       = process.env.NODE_ENV || "development";
 var config    = require(__dirname + '/../config/db.json')[env];
-debugger;
 var sequelize = new Sequelize(config.database, config.username, config.password, config);
 var db        = {};
 
@@ -19,7 +18,6 @@ fs
     db[model.name] = model;
   });
 
-debugger;
 Object.keys(db).forEach(function(modelName) {
   if ("associate" in db[modelName]) {
     db[modelName].associate(db);
