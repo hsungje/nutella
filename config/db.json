@@ -1,0 +1,9 @@
+{
+	"development": {
+		"username": "kenlee",
+		"password": null,
+		"database": "TTCLogs",
+		"host": "localhost",
+		"dialect": "postgres"
+	}
+}
