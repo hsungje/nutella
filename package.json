@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/donkeysmash/nutella#readme",
   "dependencies": {
+    "bluebird": "^3.0.1",
     "express": "^4.13.3",
     "lodash": "^3.10.1",
     "pg": "^4.4.3",

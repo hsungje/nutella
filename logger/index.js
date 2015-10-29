@@ -1,6 +1,7 @@
 var request = require('request');
 var Repeat = require('repeat');
 var _ = require('lodash');
+var Promise = require('bluebird');
 var models = require('../models');
 
 var dump_station = require('./station_single_for_test.json');
@@ -9,7 +10,9 @@ var dump_station = require('./station_single_for_test.json');
 var logger = function () {
     parseStations(dump_station)
     .then(function (stationResults) {
-        return requestStations(stationResults);
+        return Promise.all(_.map(stationResults, requestStation));
+        //1. repeater setup
+        //2. foreach station log all the vehicles
     })
     .then(function (result) {
         debugger;
@@ -17,11 +20,15 @@ var logger = function () {
     })
 };
 
-function requestStations (stations) {
-    debugger;
-    return Promise.all(_.map(stations, function (station) {
-        
-    }));
+function requestStation (station) {
+    return new Promise(function (resolve, reject) {
+        request.get(genUrl(station))
+        .on('response', function (response) { 
+            debugger;
+            if (response) resolve();
+            else reject();
+        });
+    });
 };
 
 function genUrl (stationInfo) {
