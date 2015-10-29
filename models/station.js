@@ -1,17 +1,18 @@
 var modelInit = function (sequelize, DataTypes) {
-	var Location = sequelize.define('Location', {
+	var Station = sequelize.define('Station', {
 		name: { type: DataTypes.STRING },
 		lat: { type: DataTypes.DOUBLE },
 		lng: { type: DataTypes.DOUBLE }
 	}, {
 		classMethods: {
 			associate: function (models) {
-				Location.hasMany(models['Vehicle']);
+				Station.hasMany(models['Vehicle']);
+				Station.belongsTo(models['Timestamp']);
 			}
 		},
-		timestamp: false
+		timestamps: false
 	});
-	return Location;
+	return Station;
 };
 
 module.exports = modelInit;

@@ -1,0 +1,284 @@
+{
+  "shapes": [
+    {
+      "polyline": "[[43.78076,-79.41622],[43.76861,-79.41329],[43.76117,-79.4114],[43.74443,-79.40591],[43.72483,-79.40213],[43.70833,-79.39836],[43.70635,-79.39922],[43.69778,-79.39767],[43.68798,-79.39338],[43.68227,-79.39098],[43.67693,-79.38892],[43.6706,-79.38583],[43.66539,-79.38359],[43.66116,-79.38257],[43.65632,-79.38068],[43.65247,-79.37913],[43.64936,-79.37776],[43.64725,-79.37725],[43.64635,-79.37776],[43.64576,-79.38034],[43.64567,-79.38257],[43.64598,-79.38356],[43.64762,-79.3848],[43.65098,-79.38652],[43.6547,-79.38823],[43.65954,-79.39029],[43.66712,-79.39338],[43.66812,-79.39424],[43.66861,-79.39544],[43.66824,-79.39853],[43.66725,-79.40231],[43.66799,-79.4042],[43.67023,-79.40522],[43.67482,-79.40746],[43.68202,-79.41037],[43.68314,-79.41175],[43.68388,-79.41467],[43.68686,-79.41535],[43.68866,-79.41707],[43.69071,-79.42137],[43.69096,-79.42823],[43.69356,-79.43115],[43.69543,-79.43441],[43.69865,-79.4363],[43.70945,-79.44197],[43.7159,-79.4447],[43.72434,-79.44779],[43.73402,-79.45037],[43.73686,-79.45175],[43.74406,-79.46016],[43.74604,-79.46187],[43.74927,-79.46291]]",
+      "name": "Yonge-University-Spadina Subway To Downsview Station",
+      "id": 1,
+      "stops": [
+        {
+          "lat": 43.780544281,
+          "lng": -79.4152450562,
+          "position": 1,
+          "name": "Finch Station Subway Platform",
+          "id": 10632,
+          "uri": "finch_station#finch_station_subway_platform"
+        }
+      ]
+    },
+    {
+      "polyline": "[[43.74939,-79.46291],[43.74555,-79.46136],[43.74295,-79.45913],[43.73686,-79.45157],[43.73377,-79.45037],[43.72446,-79.44797],[43.71618,-79.44428],[43.70945,-79.44161],[43.69853,-79.4363],[43.69567,-79.43458],[43.69108,-79.4284],[43.69071,-79.42188],[43.6891,-79.41759],[43.68674,-79.41604],[43.68388,-79.41484],[43.68314,-79.41175],[43.68162,-79.40982],[43.67482,-79.40746],[43.67023,-79.40505],[43.66749,-79.40368],[43.66737,-79.4018],[43.66836,-79.3987],[43.66861,-79.39544],[43.66805,-79.39415],[43.66712,-79.39338],[43.65987,-79.39038],[43.65483,-79.38815],[43.6511,-79.38652],[43.64775,-79.3848],[43.64588,-79.38334],[43.6457,-79.38231],[43.64588,-79.38034],[43.64641,-79.37742],[43.64719,-79.37712],[43.64924,-79.37776],[43.65247,-79.37913],[43.65632,-79.38068],[43.66116,-79.38257],[43.66526,-79.38377],[43.6706,-79.38583],[43.67693,-79.38874],[43.68239,-79.39115],[43.6881,-79.39338],[43.69356,-79.3963],[43.69778,-79.3975],[43.70635,-79.39922],[43.70833,-79.39853],[43.72496,-79.40213],[43.74443,-79.40557],[43.76105,-79.41158],[43.76873,-79.41329],[43.78076,-79.41604]]",
+      "name": "Yonge-University-Spadina Subway To Finch Station",
+      "id": 2,
+      "stops": [
+        {
+          "lat": 43.7491645813,
+          "lng": -79.4621582031,
+          "position": 1,
+          "name": "Downsview Station Subway Platform",
+          "id": 10383,
+          "uri": "downsview_station#downsview_station_subway_platform"
+        },
+        {
+          "lat": 43.7346572876,
+          "lng": -79.4501953125,
+          "position": 5,
+          "name": "Wilson Station Subway Platform",
+          "id": 10370,
+          "uri": "wilson_station#wilson_station_subway_platform"
+        },
+        {
+          "lat": 43.7247543335,
+          "lng": -79.4475708008,
+          "position": 6,
+          "name": "Yorkdale Station Subway Platform",
+          "id": 10365,
+          "uri": "yorkdale_station#yorkdale_station_subway_platform"
+        },
+        {
+          "lat": 43.7153625488,
+          "lng": -79.4439620972,
+          "position": 7,
+          "name": "Lawrence West Station Subway Platform",
+          "id": 10362,
+          "uri": "lawrence_west_station#lawrence_west_station_subway_platform"
+        },
+        {
+          "lat": 43.709186554,
+          "lng": -79.4410247803,
+          "position": 8,
+          "name": "Glencairn Station Subway Platform",
+          "id": 10356,
+          "uri": "glencairn_station#glencairn_station_subway_platform"
+        },
+        {
+          "lat": 43.6996994019,
+          "lng": -79.4365997314,
+          "position": 9,
+          "name": "Eglinton West Station Southbound Platform",
+          "id": 10353,
+          "uri": "eglinton_west_station#eglinton_west_station_southbound_platform"
+        },
+        {
+          "lat": 43.684463501,
+          "lng": -79.4151687622,
+          "position": 15,
+          "name": "St Clair West Station Southbound Platform",
+          "id": 10343,
+          "uri": "st_clair_west_station#st_clair_west_station_southbound_platform"
+        },
+        {
+          "lat": 43.6747245789,
+          "lng": -79.4065856934,
+          "position": 18,
+          "name": "Dupont Station Southbound Platform",
+          "id": 10339,
+          "uri": "dupont_station#dupont_station_southbound_platform"
+        },
+        {
+          "lat": 43.6696548462,
+          "lng": -79.4045257568,
+          "position": 19,
+          "name": "Spadina Station Southbound Platform",
+          "id": 10220,
+          "uri": "spadina_station#spadina_station_southbound_platform"
+        },
+        {
+          "lat": 43.6685066223,
+          "lng": -79.3987426758,
+          "position": 22,
+          "name": "St George Station North-South Platform",
+          "id": 10460,
+          "uri": "st_george_station#st_george_station_north-south_platform"
+        },
+        {
+          "lat": 43.6671791077,
+          "lng": -79.3935623169,
+          "position": 25,
+          "name": "Museum Station Subway Platform",
+          "id": 10334,
+          "uri": "museum_station#museum_station_subway_platform"
+        },
+        {
+          "lat": 43.6599617004,
+          "lng": -79.3905029297,
+          "position": 26,
+          "name": "Queens Park Station Subway Platform",
+          "id": 10326,
+          "uri": "queens_park_station#queens_park_station_subway_platform"
+        },
+        {
+          "lat": 43.6547660828,
+          "lng": -79.3879776001,
+          "position": 27,
+          "name": "St Patrick Station Subway Platform",
+          "id": 10207,
+          "uri": "st_patrick_station#st_patrick_station_subway_platform"
+        },
+        {
+          "lat": 43.6510162354,
+          "lng": -79.3866348267,
+          "position": 28,
+          "name": "Osgoode Station Subway Platform",
+          "id": 10319,
+          "uri": "osgoode_station#osgoode_station_subway_platform"
+        },
+        {
+          "lat": 43.6476745605,
+          "lng": -79.384803772,
+          "position": 29,
+          "name": "St Andrew Station Subway Platform",
+          "id": 10313,
+          "uri": "st_andrew_station#st_andrew_station_subway_platform"
+        },
+        {
+          "lat": 43.6450958252,
+          "lng": -79.3810272217,
+          "position": 32,
+          "name": "Union Station Subway Platform",
+          "id": 10540,
+          "uri": "union_station#union_station_subway_platform"
+        },
+        {
+          "lat": 43.648727417,
+          "lng": -79.3779296875,
+          "position": 35,
+          "name": "King Station Northbound Platform",
+          "id": 10548,
+          "uri": "king_station#king_station_northbound_platform"
+        },
+        {
+          "lat": 43.6523246765,
+          "lng": -79.3793029785,
+          "position": 36,
+          "name": "Queen Station Northbound Platform",
+          "id": 10558,
+          "uri": "queen_station#queen_station_northbound_platform"
+        },
+        {
+          "lat": 43.655632019,
+          "lng": -79.3808135986,
+          "position": 37,
+          "name": "Dundas Station Northbound Platform",
+          "id": 10569,
+          "uri": "dundas_station#dundas_station_northbound_platform"
+        },
+        {
+          "lat": 43.661113739,
+          "lng": -79.3832015991,
+          "position": 38,
+          "name": "College Station Northbound Platform",
+          "id": 10306,
+          "uri": "college_station#college_station_northbound_platform"
+        },
+        {
+          "lat": 43.6654777527,
+          "lng": -79.383934021,
+          "position": 39,
+          "name": "Wellesley Station Northbound Platform",
+          "id": 10302,
+          "uri": "wellesley_station#wellesley_station_northbound_platform"
+        },
+        {
+          "lat": 43.6710472107,
+          "lng": -79.3855514526,
+          "position": 40,
+          "name": "Bloor-Yonge Station Northbound Platform",
+          "id": 10441,
+          "uri": "bloor-yonge_station#bloor-yonge_station_northbound_platform"
+        },
+        {
+          "lat": 43.6767120361,
+          "lng": -79.3885345459,
+          "position": 41,
+          "name": "Rosedale Station Northbound Platform",
+          "id": 10297,
+          "uri": "rosedale_station#rosedale_station_northbound_platform"
+        },
+        {
+          "lat": 43.682849884,
+          "lng": -79.3908538818,
+          "position": 42,
+          "name": "Summerhill Station Northbound Platform",
+          "id": 10294,
+          "uri": "summerhill_station#summerhill_station_northbound_platform"
+        },
+        {
+          "lat": 43.6879615784,
+          "lng": -79.3933792114,
+          "position": 43,
+          "name": "St Clair Station Northbound Platform",
+          "id": 10284,
+          "uri": "st_clair_station#st_clair_station_northbound_platform"
+        },
+        {
+          "lat": 43.6977081299,
+          "lng": -79.3970718384,
+          "position": 45,
+          "name": "Davisville Station Northbound Platform",
+          "id": 10278,
+          "uri": "davisville_station#davisville_station_northbound_platform"
+        },
+        {
+          "lat": 43.7057304382,
+          "lng": -79.398475647,
+          "position": 46,
+          "name": "Eglinton Station Subway Platform",
+          "id": 10608,
+          "uri": "eglinton_station#eglinton_station_subway_platform"
+        },
+        {
+          "lat": 43.7262802124,
+          "lng": -79.4032974243,
+          "position": 48,
+          "name": "Lawrence Station Subway Platform",
+          "id": 10618,
+          "uri": "lawrence_station#lawrence_station_subway_platform"
+        },
+        {
+          "lat": 43.74401474,
+          "lng": -79.4061965942,
+          "position": 49,
+          "name": "York Mills Station Subway Platform",
+          "id": 10604,
+          "uri": "york_mills_station#york_mills_station_subway_platform"
+        },
+        {
+          "lat": 43.7614097595,
+          "lng": -79.4106369019,
+          "position": 50,
+          "name": "Sheppard-Yonge Station North-South Platform",
+          "id": 10670,
+          "uri": "sheppard-yonge_station#sheppard-yonge_station_north-south_platform"
+        },
+        {
+          "lat": 43.767993927,
+          "lng": -79.4116134644,
+          "position": 51,
+          "name": "North York Centre Station Northbound Platform",
+          "id": 10599,
+          "uri": "north_york_centre_station#north_york_centre_station_northbound_platform"
+        },
+        {
+          "lat": 43.780544281,
+          "lng": -79.4152450562,
+          "position": 52,
+          "name": "Finch Station Subway Platform",
+          "id": 10632,
+          "uri": "finch_station#finch_station_subway_platform"
+        }
+      ]
+    }
+  ],
+  "name": "Yonge-University-Spadina Subway",
+  "uri": "yonge-university-spadina_subway"
+}

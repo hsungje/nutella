@@ -13,7 +13,7 @@ var modelInit = function (sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function (models) {
-        Vehicle.belongsTo(models['Location']);
+        Vehicle.belongsTo(models['Station']);
       }
     },
     timestamps: false

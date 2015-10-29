@@ -4,7 +4,7 @@ var modelInit = function (sequelize, DataTypes) {
 	}, {
 		classMethods: {
 			associate: function (models) {
-				Timestamp.hasMany(models['Location']);
+				Timestamp.hasMany(models['Station']);
 			}
 		},
 		timestamps: false
