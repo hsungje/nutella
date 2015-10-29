@@ -1,0 +1,33 @@
+{
+  "name": "nutella",
+  "version": "0.0.1",
+  "description": "TTC Logger",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "NODE_PATH=./config NODE_ENV=development node server.js",
+    "debug": "NODE_PATH=./config NODE_ENV=development node debug server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/donkeysmash/nutella.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/donkeysmash/nutella/issues"
+  },
+  "homepage": "https://github.com/donkeysmash/nutella#readme",
+  "dependencies": {
+    "bluebird": "^3.0.1",
+    "express": "^4.13.3",
+    "lodash": "^3.10.1",
+    "pg": "^4.4.3",
+    "pg-hstore": "^2.3.2",
+    "repeat": "0.0.6",
+    "request": "^2.65.0",
+    "sequelize": "^3.12.2"
+  }
+}
