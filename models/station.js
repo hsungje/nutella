@@ -7,10 +7,8 @@ var modelInit = function (sequelize, DataTypes) {
 		classMethods: {
 			associate: function (models) {
 				Station.hasMany(models['Vehicle']);
-				Station.belongsTo(models['Timestamp']);
 			}
 		},
-		timestamps: false
 	});
 	return Station;
 };

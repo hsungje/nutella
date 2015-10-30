@@ -15,8 +15,7 @@ var modelInit = function (sequelize, DataTypes) {
       associate: function (models) {
         Vehicle.belongsTo(models['Station']);
       }
-    },
-    timestamps: false
+    }
   });
 
   return Vehicle;

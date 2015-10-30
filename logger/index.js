@@ -3,6 +3,8 @@ var Repeat = require('repeat');
 var _ = require('lodash');
 var Promise = require('bluebird');
 var models = require('../models');
+var Vehicle = models['Vehicle'];
+var Station = models['Station'];
 
 var dump_station = require('./station_single_for_test.json');
 //var dump_station = require('./station.json');
@@ -10,36 +12,31 @@ var dump_station = require('./station_single_for_test.json');
 var logger = function () {
     parseStations(dump_station)
     .then(function (stationResults) {
-        return Promise.all(_.map(stationResults, requestStation));
-        //1. repeater setup
-        //2. foreach station log all the vehicles
-    })
-    .then(function (result) {
-        debugger;
-        console.log('logged')
+        Repeat(function () {
+            _.map(stationResults, requestStation);
+        }).every(60, 's').start.now()
+        .then(function () {
+            console.log('done');
+         });
     })
 };
 
+
 function requestStation (station) {
-    return new Promise(function (resolve, reject) {
-        request.get(genUrl(station))
-        .on('response', function (response) { 
-            debugger;
-            if (response) resolve();
-            else reject();
-        });
+    request(genUrl(station), function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            var result = JSON.parse(body);
+            _.forEach(result['vehicles'], function (vehicle) {
+                Vehicle.create(vehicle).then(function (createdVehicle) {
+                    createdVehicle.setStation(station)
+                })
+            })
+        }
     });
 };
 
 function genUrl (stationInfo) {
     return 'http://myttc.ca/vehicles/near/' + stationInfo.lat + ',' + stationInfo.lng + '.json';
-}
-
-function parseVehicles (vs) {
-    return Promise.all(_.map(vs, function (v) {
-        debugger;
-        return models['Vehicle'].build(v).save();
-    }));
 }
 
 function parseStations (o) {
