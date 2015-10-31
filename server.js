@@ -4,8 +4,5 @@ var Repeat = require('repeat');
 
 models.sequelize.sync({ force: true, logging: console.log }).then(function () {
 	console.log('---sync completed---');
-	//add error handling
-	// is "require" optimized?
-	logger();
-	// Repeat(logger).every('60', 's').start.now();
+    // logger();
 })

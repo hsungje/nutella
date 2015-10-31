@@ -6,8 +6,8 @@ var models = require('../models');
 var Vehicle = models['Vehicle'];
 var Station = models['Station'];
 
-var dump_station = require('./station_single_for_test.json');
-//var dump_station = require('./station.json');
+///var dump_station = require('./station_single_for_test.json');
+var dump_station = require('./station.json');
 
 var logger = function () {
     parseStations(dump_station)
