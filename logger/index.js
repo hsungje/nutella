@@ -21,13 +21,14 @@ var logger = function () {
     })
 };
 
-
 function requestStation (station) {
     request(genUrl(station), function (error, response, body) {
         if (!error && response.statusCode == 200) {
             var result = JSON.parse(body);
+            debugger;
             _.forEach(result['vehicles'], function (vehicle) {
                 Vehicle.create(vehicle).then(function (createdVehicle) {
+                debugger;
                     createdVehicle.setStation(station)
                 })
             })
@@ -42,7 +43,7 @@ function genUrl (stationInfo) {
 function parseStations (o) {
     var stnArr = o.shapes[0].stops;
     return Promise.all(_.map(stnArr, function (stn) {
-        return models['Station'].build(stn).save();
+        return Station.build(stn).save();
     }));
 }
 
