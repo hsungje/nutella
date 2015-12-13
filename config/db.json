@@ -2,7 +2,7 @@
 	"development": {
 		"username": "kenlee",
 		"password": null,
-		"database": "TTCLogs",
+		"database": "MyBlueElephant",
 		"host": "localhost",
 		"dialect": "postgres"
 	}

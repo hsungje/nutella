@@ -1,25 +1,20 @@
+var fs = require('fs');
 var models = require('./models');
+var join = require('path').join;
 var logger = require('./logger');
 var Repeat = require('repeat');
-var path = require('path');
 var express = require('express');
 var app = express();
 
-models.sequelize.sync().then(function () {
-	
-	app.get('/',function(req,res){
-		res.sendFile(path.join(__dirname+'/view/index.html'));
-	});
-	
-	app.get('/api',function(req,res){
-		models['Vehicle'].findAll({where: {StationId: 10600}})
-		.then(function (vehicle) {
-			res.json(vehicle);
-		});
-	});
+fs.readdirSync(join(__dirname, 'models')).forEach(function (file) {
+	if (~file.indexOf('.js')) require(join(__dirname, 'models', file));
+});
 
-	var server = app.listen(3000, function () {
-		var host = server.address();
-		var port = server.address().port;
+require('./routes')(app, function () {
+	console.log('--routes init--');
+
+	models.sequelize.sync().then(function() {
+		console.log('--sequelize init--');
+		app.listen(3000);
 	});
 });
