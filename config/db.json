@@ -1,9 +1,0 @@
-{
-	"development": {
-		"username": "kenlee",
-		"password": null,
-		"database": "MyBlueElephant",
-		"host": "localhost",
-		"dialect": "postgres"
-	}
-}
