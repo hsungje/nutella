@@ -3,10 +3,9 @@ var models = require('./models');
 var join = require('path').join;
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
-var userRoutes = require('./routes/user');
-var taskRoutes = require('./routes/task');
+var apiRoutes = require('./routes/api');
 
 var errorHandler = require('./config/error');
 
@@ -21,11 +20,11 @@ models.sequelize.sync().then(function() {
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-	extended: true
+	extended: true 
 })); 
 
-app.use('/user', userRoutes);
-app.use('/task', taskRoutes);
+// routing
+app.use('/api', apiRoutes);
 
 app.use(function (req, res, next) {
 	var err = new Error('Not Found');
