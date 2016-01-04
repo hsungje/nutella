@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "kenlee",
+    "password": null,
+    "database": "PomodoroDB",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
