@@ -7,8 +7,8 @@
     "test": "test"
   },
   "scripts": {
-    "start": "npm run serve | npm run dev",
-    "debug": "npm run serve-debug | npm run dev",
+    "start": "npm run serve",
+    "debug": "npm run serve-debug",
     "serve": "NODE_PATH=./config NODE_ENV=development node server.js",
     "serve-debug": "NODE_PATH=./config NODE_ENV=development node debug server.js",
     "dev": "webpack-dev-server --progress --colors --port 8090"
