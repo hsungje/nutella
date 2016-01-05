@@ -1,7 +1,6 @@
 /** @jsx React.DOM */
 'use strict'
-var React = require('react');
 var ReactDOM = require('react-dom');
-var Hello = require('./components/Hello.jsx');
+var Pomodoro = require('./components/pomodoro.jsx');
 
-ReactDOM.render(<Hello />, document.getElementById('content'));
+ReactDOM.render(<Pomodoro />, document.getElementById('content'));
