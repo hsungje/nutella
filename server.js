@@ -1,11 +1,13 @@
 var fs = require('fs');
 var models = require('./models');
-var join = require('path').join;
+var path = require('path');
+var join = path.join;
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
 var apiRoutes = require('./routes/api');
+var appRoutes = require('./routes/app');
 
 var errorHandler = require('./config/error');
 
@@ -25,6 +27,7 @@ app.use(bodyParser.urlencoded({
 
 // routing
 app.use('/api', apiRoutes);
+app.use('/', appRoutes);
 
 app.use(function (req, res, next) {
 	var err = new Error('Not Found');

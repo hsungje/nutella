@@ -7,8 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "start": "NODE_PATH=./config NODE_ENV=development node server.js",
-    "debug": "NODE_PATH=./config NODE_ENV=development node debug server.js"
+    "start": "npm run serve | npm run dev",
+    "debug": "npm run serve-debug | npm run dev",
+    "serve": "NODE_PATH=./config NODE_ENV=development node server.js",
+    "serve-debug": "NODE_PATH=./config NODE_ENV=development node debug server.js",
+    "dev": "webpack-dev-server --progress --colors --port 8090"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,12 @@
     "lodash": "^3.10.1",
     "pg": "^4.4.3",
     "pg-hstore": "^2.3.2",
+    "react": "^0.14.5",
     "sequelize": "^3.12.2"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.13.2",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }
