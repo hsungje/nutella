@@ -1,5 +1,7 @@
 /** @jsx React.DOM */
 'use strict'
-var React = require('react')
-var Hello = require('./components/Hello.jsx')
-React.renderComponent(<Hello />, document.getElementById('content'));
+var React = require('react');
+var ReactDOM = require('react-dom');
+var Hello = require('./components/Hello.jsx');
+
+ReactDOM.render(<Hello />, document.getElementById('content'));
