@@ -42,7 +42,7 @@ module.exports = React.createClass({
     render: function(){
     	var names = _.map(this.state.users, function (user) {
     		return (
-    			<div>{user.name}</div>
+    			<div key={user.id}>{user.name}</div>
     		);
     	});
     	return (
