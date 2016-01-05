@@ -7,8 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "start": "NODE_PATH=./config NODE_ENV=development node server.js",
-    "debug": "NODE_PATH=./config NODE_ENV=development node debug server.js"
+    "start": "npm run serve",
+    "debug": "npm run serve-debug",
+    "serve": "NODE_PATH=./config NODE_ENV=development node server.js",
+    "serve-debug": "NODE_PATH=./config NODE_ENV=development node debug server.js",
+    "dev": "webpack-dev-server --progress --colors --port 8090"
   },
   "repository": {
     "type": "git",
@@ -21,12 +24,24 @@
   },
   "homepage": "https://github.com/donkeysmash/nutella#readme",
   "dependencies": {
+    "babel-preset-react": "^6.3.13",
     "bluebird": "^3.0.1",
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
+    "flux": "^2.1.1",
+    "jquery": "^2.1.4",
+    "keymirror": "^0.1.1",
     "lodash": "^3.10.1",
     "pg": "^4.4.3",
     "pg-hstore": "^2.3.2",
-    "sequelize": "^3.12.2"
+    "react": "^0.14.5",
+    "react-dom": "^0.14.5",
+    "sequelize": "^3.12.2",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "jsx-loader": "^0.13.2",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
   }
 }
