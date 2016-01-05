@@ -8,7 +8,6 @@ var bodyParser = require('body-parser');
 
 var apiRoutes = require('./routes/api');
 var appRoutes = require('./routes/app');
-
 var errorHandler = require('./config/error');
 
 fs.readdirSync(join(__dirname, 'models')).forEach(function (file) {
@@ -17,14 +16,13 @@ fs.readdirSync(join(__dirname, 'models')).forEach(function (file) {
 
 models.sequelize.sync().then(function() {
 	console.log('--sequelize init--'); 
-	app.listen(3000);
 });
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
 	extended: true 
 })); 
-
+		
 // routing
 app.use('/api', apiRoutes);
 app.use('/', appRoutes);
@@ -36,3 +34,4 @@ app.use(function (req, res, next) {
 })
 
 app.use(errorHandler.generalError);
+app.listen(3000);
