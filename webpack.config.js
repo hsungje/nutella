@@ -12,14 +12,15 @@ module.exports = {
                 //tell webpack to use jsx-loader for all *.jsx files
                 test: /\.jsx$/,
                 loader: 'jsx-loader?insertPragma=React.DOM&harmony'
+            },
+            { 
+                test: /\.(woff2?|svg)$/, 
+                loader: 'url?limit=10000'
+            },
+            {
+                test: /\.(ttf|eot)$/, loader: 'file' 
             }
         ]
-    },
-    externals: {
-        //don't bundle the 'react' npm package with our bundle.js
-        //but get it from a global 'React' variable
-        'react': 'React',
-        'react-dom': 'ReactDOM'
     },
     resolve: {
         extensions: ['', '.js', '.jsx']
