@@ -42,11 +42,13 @@ module.exports = React.createClass({
     render: function(){
     	var names = _.map(this.state.users, function (user) {
     		return (
-    			<div key={user.id}>{user.name}</div>
+    			<div className={'row'} key={user.id}>
+    				<div className={'col-sm-6'}><p>{user.name}</p></div>
+    			</div>
     		);
     	});
     	return (
-    		<div>
+    		<div className={'container'}>
     		{names}
     		</div>
     	);
