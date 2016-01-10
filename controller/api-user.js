@@ -13,8 +13,13 @@ var apiUser = {
 		User.findAll().then(function (foundUsers) {
 			res.json(foundUsers);
 		});
-	}
-}
+	},
 
+    getById: function (req, res) {
+        User.findById(req.params.id).then(function (user) {
+            res.json(user);
+        });
+    }
+}
 
 module.exports = apiUser;

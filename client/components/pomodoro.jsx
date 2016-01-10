@@ -10,7 +10,7 @@ var Action = require('../actions/action')
 module.exports = React.createClass({
 	getInitialState: function () {
 		return {
-			users: Store.getAllUsers()
+			tasks: Store.getAllTasks()
 		}
 	},
 
@@ -24,32 +24,32 @@ module.exports = React.createClass({
 
 	componentWillMount: function () {
 		$.ajax({
-			url: "http://localhost:3000/api/user",
+			url: 'http://localhost:3000/api/me/tasks',
 			type: 'GET',
 			contentType: 'application/json',
 			success: function (response) {
-				Action.getAllUsers(response);
+				Action.getAllTasks(response);
 			}
 		});
 	},
 
 	onStoreChange: function () {
 		this.setState({
-			users: Store.getAllUsers()
+			tasks: Store.getAllTasks()
 		});
 	},
 
     render: function(){
-    	var names = _.map(this.state.users, function (user) {
+    	var taskTitles = _.map(this.state.tasks, function (task) {
     		return (
-    			<div className={'row'} key={user.id}>
-    				<div className={'col-sm-6'}><p>{user.name}</p></div>
+    			<div className={'row'} key={task.id}>
+    				<div className={'col-sm-6'}><p>{task.title}</p></div>
     			</div>
     		);
     	});
     	return (
     		<div className={'container'}>
-    		{names}
+    		{taskTitles}
     		</div>
     	);
     }

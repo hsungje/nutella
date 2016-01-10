@@ -4,9 +4,9 @@ var Constants = require('../constants/constants');
 var ActionTypes = Constants.ActionTypes;
 
 var Action = {
-	getAllUsers: function (entities) {
+	getAllTasks: function (entities) {
 		Dispatcher.dispatch({
-			type: ActionTypes.GET_ALL_USERS,
+			type: ActionTypes.GET_ALL_TASKS,
 			entities: entities
 		});
 	}

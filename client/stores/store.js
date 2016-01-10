@@ -4,21 +4,21 @@ var EventEmitter = require('events').EventEmitter;
 var Constants = require('../constants/constants');
 var ActionTypes = Constants.ActionTypes;
 
-var _users = {};
+var _tasks = {};
 
 var UPDATE_EVENT = 'updateEvent';
 
-function createUser(user) {
-	_users[user.id] = user;
+function assignTask(task) {
+	_tasks[task.id] = task;
 }
 
-function destroyUser(user) {
-	delete _users[user.id];
+function destroyUser(task) {
+	delete _tasks[task.id];
 }
 
 var Store = _.assign({}, EventEmitter.prototype, {
-	getAllUsers: function () {
-		return _users;
+	getAllTasks: function () {
+		return _tasks;
 	},
 
 	emitChange: function () {
@@ -33,17 +33,15 @@ var Store = _.assign({}, EventEmitter.prototype, {
 		this.removeListener(UPDATE_EVENT, callback);
 	},
 
-	updateUsers: function (users) {
-		_.forEach(users, function (user) {
-			_users[user.id] = user;
-		});
+	updateTasks: function (tasks) {
+		_.forEach(tasks, assignTask);
 	}
 });
 
 Store.dispatchToken = Dispatcher.register(function (action) {
 	switch(action.type) {
-		case ActionTypes.GET_ALL_USERS:
-			Store.updateUsers(action.entities);
+		case ActionTypes.GET_ALL_TASKS:
+			Store.updateTasks(action.entities);
 			Store.emitChange();
 			break;
 		default:
