@@ -10,6 +10,7 @@
     "start": "npm run serve",
     "debug": "npm run serve-debug",
     "cleandb": "dropdb PomodoroDB && createdb PomodoroDB",
+    "populate": "psql -d PomodoroDB -f ./db_backup/mockup_0.psql",
     "serve": "NODE_PATH=./config NODE_ENV=development node server.js",
     "serve-debug": "NODE_PATH=./config NODE_ENV=development node debug server.js",
     "dev": "webpack-dev-server --progress --colors --port 8090"

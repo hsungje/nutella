@@ -1,0 +1,16 @@
+INSERT INTO "Users" VALUES 
+	(DEFAULT, 'testing_username0', 'testing_displayname0', 'password', '2015-01-01', '2015-01-01'),
+	(DEFAULT, 'testing_username1', 'testing_displayname1', 'password', '2015-01-01', '2015-01-01'),
+	(DEFAULT, 'testing_username2', 'testing_displayname2', 'password', '2015-01-01', '2015-01-01');
+
+INSERT INTO "Tasks" VALUES 
+	(DEFAULT, 'test_task0', 'test_context0', 0, '2015-01-01', '2015-01-01', 1),
+	(DEFAULT, 'test_task1', 'test_context1', 0, '2015-01-01', '2015-01-01', 1),
+	(DEFAULT, 'test_task2', 'test_context2', 0, '2015-01-01', '2015-01-01', 1),
+	(DEFAULT, 'test_task3', 'test_context3', 0, '2015-01-01', '2015-01-01', 1),
+	(DEFAULT, 'test_task4', 'test_context4', 0, '2015-01-01', '2015-01-01', 1),
+	(DEFAULT, 'test_task5', 'test_context5', 0, '2015-01-01', '2015-01-01', 1),
+	(DEFAULT, 'test_task6', 'test_context6', 0, '2015-01-01', '2015-01-01', 1),
+	(DEFAULT, 'test_task7', 'test_context7', 0, '2015-01-01', '2015-01-01', 1),
+	(DEFAULT, 'test_task8', 'test_context8', 0, '2015-01-01', '2015-01-01', 1),
+	(DEFAULT, 'test_task9', 'test_context9', 0, '2015-01-01', '2015-01-01', 2);
