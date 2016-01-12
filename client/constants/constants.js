@@ -2,6 +2,7 @@ var keyMirror = require('keymirror');
 
 module.exports = {
 	ActionTypes: keyMirror({
-		GET_ALL_TASKS: null
+		GET_ALL_TASKS: null,
+        ADD_TASK: null
 	})
 };

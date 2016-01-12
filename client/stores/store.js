@@ -35,7 +35,11 @@ var Store = _.assign({}, EventEmitter.prototype, {
 
 	updateTasks: function (tasks) {
 		_.forEach(tasks, assignTask);
-	}
+	},
+
+    addTask: function (task) {
+        assignTask(task);
+    }
 });
 
 Store.dispatchToken = Dispatcher.register(function (action) {
@@ -44,6 +48,10 @@ Store.dispatchToken = Dispatcher.register(function (action) {
 			Store.updateTasks(action.entities);
 			Store.emitChange();
 			break;
+        case ActionTypes.ADD_TASK:
+            Store.addTask(action.entities);
+            Store.emitChange();
+            break;
 		default:
 	}
 })

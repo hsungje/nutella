@@ -9,7 +9,14 @@ var Action = {
 			type: ActionTypes.GET_ALL_TASKS,
 			entities: entities
 		});
-	}
+	},
+    
+    addTask: function (entities) {
+        Dispatcher.dispatch({
+            type: ActionTypes.ADD_TASK,
+            entities: entities
+        });
+    }
 };
 
 module.exports = Action;

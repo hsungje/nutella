@@ -8,6 +8,7 @@ var Store = require('../stores/store');
 var Action = require('../actions/action')
 
 var TaskItem = require('./taskItem');
+var AddTaskRow = require('./addTaskRow');
 
 module.exports = React.createClass({
     getInitialState: function () {
@@ -49,9 +50,12 @@ module.exports = React.createClass({
         });
         return (
             <div className={'container'}>
-                <div className={'task-items'}>
-                    {TaskItems}
+                <div className={'task-items row'}>
+                    <div className={'col-xs-12'}>
+                        {TaskItems}
+                    </div>
                 </div>
+                <AddTaskRow />
             </div>
         );
     }
