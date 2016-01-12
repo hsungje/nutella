@@ -4,35 +4,45 @@ var Task = models['Task'];
 var User = models['User'];
 
 var apiMe = {
-    getTasks: function (req, res) {
+    checkUser: function (req, res, next) {
         if (req.user) {
-            User.findById(req.user.id).then(function (user) {
-                return user.getTasks();
-            }).then(function (tasks) {
-                res.json(tasks);
-            });
-            /* alternately...
-            Task.findAll({
-                where: {UserId: req.user.id}
-            }).then(function (tasks) {
-                res.json(tasks);
-            });
-            */
+            next();
         } else {
             res.status(401).json({ error: 'Login Required' });
         }
     },
 
+    getTasks: function (req, res) {
+        User.findById(req.user.id).then(function (user) {
+            return user.getTasks();
+        }).then(function (tasks) {
+            res.json(tasks);
+        });
+        /* alternately...
+        Task.findAll({
+            where: {UserId: req.user.id}
+        }).then(function (tasks) {
+            res.json(tasks);
+        });
+        */
+    },
+
     postTask: function (req, res) {
-        if (req.user) {
-            User.findById(req.user.id).then(function (user) {
-                return user.createTask(req.body);
-            }).then(function (result) {
-                res.json(result);
+        User.findById(req.user.id).then(function (user) {
+            return user.createTask(req.body);
+        }).then(function (result) {
+            res.json(result);
+        });
+    },
+
+    deleteTask: function (req, res) {
+        Task.findById(req.params.id).then(function (task) {
+            return task.destroy();
+        }).then(function (destroyResult) {
+            res.json({
+                id: req.params.id
             });
-        } else {
-            res.status(401).json({ error: 'Login Required' });
-        }
+        });
     }
 };
 

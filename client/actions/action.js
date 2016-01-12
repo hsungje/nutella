@@ -10,12 +10,20 @@ var Action = {
 			entities: entities
 		});
 	},
-    
+
     addTask: function (entities) {
         Dispatcher.dispatch({
             type: ActionTypes.ADD_TASK,
             entities: entities
         });
+    },
+
+    removeTask: function (entities) {
+        Dispatcher.dispatch({
+            type: ActionTypes.REMOVE_TASK,
+            entities: entities
+        });
+
     }
 };
 

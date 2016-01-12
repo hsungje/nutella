@@ -12,7 +12,7 @@ function assignTask(task) {
 	_tasks[task.id] = task;
 }
 
-function destroyUser(task) {
+function destroyTask(task) {
 	delete _tasks[task.id];
 }
 
@@ -39,6 +39,10 @@ var Store = _.assign({}, EventEmitter.prototype, {
 
     addTask: function (task) {
         assignTask(task);
+    },
+
+    removeTask: function (task) {
+        destroyTask(task);
     }
 });
 
@@ -50,6 +54,10 @@ Store.dispatchToken = Dispatcher.register(function (action) {
 			break;
         case ActionTypes.ADD_TASK:
             Store.addTask(action.entities);
+            Store.emitChange();
+            break;
+        case ActionTypes.REMOVE_TASK:
+            Store.removeTask(action.entities);
             Store.emitChange();
             break;
 		default:
