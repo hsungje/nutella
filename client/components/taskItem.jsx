@@ -10,7 +10,15 @@ module.exports = React.createClass({
     render: function() {
         return (
             <div className={'task-item row'}>
-                {this.props.task.title}
+                <div className={'col-xs-4'}>
+                    {this.props.task.title}
+                </div>
+                <div className={'col-xs-4'}>
+                    {this.props.task.context}
+                </div>
+                <div className={'col-xs-4'}>
+                    {this.props.task.duration}
+                </div>
             </div>
         );
     }
