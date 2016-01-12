@@ -19,7 +19,6 @@ module.exports = React.createClass({
     handleFormChange: function (event) {
         var change = {};
         change[event.target.name] = event.target.value;
-        console.log(change);
         this.setState(change);
     },
 
