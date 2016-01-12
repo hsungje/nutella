@@ -48,18 +48,33 @@ module.exports = React.createClass({
         return (
             <div className={'row'}>
                 <div className={'col-xs-4'}>
-                    <label>Task Title</label>
-                    <input name='taskTitle' type='text' value={taskTitle} onChange={this.handleFormChange} />
+                    <input
+                        name='taskTitle'
+                        placeholder='Task Title'
+                        type='text'
+                        value={taskTitle}
+                        onChange={this.handleFormChange}
+                    />
                 </div>
                 <div className={'col-xs-4'}>
-                    <label>Context</label>
-                    <input name='taskContext' type='text' value={taskContext} onChange={this.handleFormChange} />
+                    <input
+                        name='taskContext'
+                        placeholder='Context'
+                        type='text'
+                        value={taskContext}
+                        onChange={this.handleFormChange}
+                    />
                 </div>
-                <div className={'col-xs-3'}>
-                    <label>Duration</label>
-                    <input name='taskDuration' type='text' value={taskDuration} onChange={this.handleFormChange} />
+                <div className={'col-xs-2'}>
+                    <input
+                        name='taskDuration'
+                        placeholder='Duration'
+                        type='text'
+                        value={taskDuration}
+                        onChange={this.handleFormChange}
+                    />
                 </div>
-                <div className={'col-xs-1'}>
+                <div className={'col-xs-2'}>
                     <button onClick={this.handleButtonClick} className={'btn btn-default'}>Add Task</button>
                 </div>
             </div>
