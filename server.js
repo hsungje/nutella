@@ -9,7 +9,7 @@ var app = express();
 var models = require('./models');
 
 fs.readdirSync(join(__dirname, 'models')).forEach(function (file) {
-	if (~file.indexOf('.js')) require(join(__dirname, 'models', file));
+    if ((file.indexOf('.') !== 0) && (file.slice(-3) === '.js')) require(join(__dirname, 'models', file));
 });
 
 models.sequelize.sync().then(function() {

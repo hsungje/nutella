@@ -50,6 +50,11 @@ module.exports = React.createClass({
         });
         return (
             <div className={'container'}>
+                <div className={'row'}>
+                    <div className={'col-xs-2 col-xs-offset-10'}>
+                        PLACEHOLDER FOR NAME
+                    </div>
+                </div>
                 <div className={'task-items row'}>
                     <div className={'col-xs-12'}>
                         {TaskItems}

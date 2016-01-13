@@ -18,6 +18,16 @@ module.exports = React.createClass({
         });
     },
 
+    handleDurationClick: function (event) {
+        $.ajax({
+            url: 'http://localhost:3000/api/me/tasks/' + this.props.task.id + '/startTimer',
+            type: 'POST',
+            contentType: 'application/json',
+            success: function (response) {
+            }
+        });
+    },
+
     render: function() {
         console.log('rendering..');
         return (
@@ -28,7 +38,7 @@ module.exports = React.createClass({
                 <div className={'col-xs-4'}>
                     {this.props.task.context}
                 </div>
-                <div className={'col-xs-2'}>
+                <div className={'col-xs-2'} onClick={this.handleDurationClick}>
                     {this.props.task.duration}
                 </div>
                 <div className={'col-xs-2'} onClick={this.handleDeleteClick}>
