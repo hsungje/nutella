@@ -37,6 +37,15 @@ module.exports = React.createClass({
                 Action.addTask(response);
             }
         });
+        this.clearInputFields();
+    },
+
+    clearInputFields: function () {
+        this.setState({
+            taskTitle : '',
+            taskContext : '',
+            taskDuration : ''
+        })
     },
 
     render: function () {

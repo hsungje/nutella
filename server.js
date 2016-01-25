@@ -13,7 +13,7 @@ fs.readdirSync(join(__dirname, 'models')).forEach(function (file) {
 });
 
 models.sequelize.sync().then(function() {
-	console.log('--sequelize init--');
+    console.log('--sequelize init--');
 });
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));

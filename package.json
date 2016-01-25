@@ -47,6 +47,7 @@
     "pg-hstore": "^2.3.2",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
+    "react-timer-mixin": "^0.13.3",
     "resolve-url-loader": "^1.4.3",
     "sass-loader": "^3.1.2",
     "sequelize": "^3.12.2",

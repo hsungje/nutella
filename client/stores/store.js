@@ -9,33 +9,33 @@ var _tasks = {};
 var UPDATE_EVENT = 'updateEvent';
 
 function assignTask(task) {
-	_tasks[task.id] = task;
+    _tasks[task.id] = task;
 }
 
 function destroyTask(task) {
-	delete _tasks[task.id];
+    delete _tasks[task.id];
 }
 
 var Store = _.assign({}, EventEmitter.prototype, {
-	getAllTasks: function () {
-		return _tasks;
-	},
+    getAllTasks: function () {
+        return _tasks;
+    },
 
-	emitChange: function () {
-		this.emit(UPDATE_EVENT);
-	},
+    emitChange: function () {
+        this.emit(UPDATE_EVENT);
+    },
 
-	addChangeListener: function (callback) {
-		this.on(UPDATE_EVENT, callback);
-	},
+    addChangeListener: function (callback) {
+        this.on(UPDATE_EVENT, callback);
+    },
 
-	removeChangeListener: function(callback) {
-		this.removeListener(UPDATE_EVENT, callback);
-	},
+    removeChangeListener: function(callback) {
+        this.removeListener(UPDATE_EVENT, callback);
+    },
 
-	updateTasks: function (tasks) {
-		_.forEach(tasks, assignTask);
-	},
+    updateTasks: function (tasks) {
+        _.forEach(tasks, assignTask);
+    },
 
     addTask: function (task) {
         assignTask(task);
@@ -47,11 +47,11 @@ var Store = _.assign({}, EventEmitter.prototype, {
 });
 
 Store.dispatchToken = Dispatcher.register(function (action) {
-	switch(action.type) {
-		case ActionTypes.GET_ALL_TASKS:
-			Store.updateTasks(action.entities);
-			Store.emitChange();
-			break;
+    switch(action.type) {
+        case ActionTypes.GET_ALL_TASKS:
+            Store.updateTasks(action.entities);
+            Store.emitChange();
+            break;
         case ActionTypes.ADD_TASK:
             Store.addTask(action.entities);
             Store.emitChange();
@@ -60,8 +60,8 @@ Store.dispatchToken = Dispatcher.register(function (action) {
             Store.removeTask(action.entities);
             Store.emitChange();
             break;
-		default:
-	}
+        default:
+    }
 })
 
 module.exports = Store;

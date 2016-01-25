@@ -3,10 +3,18 @@
 var React = require('react');
 
 var Store = require('../stores/store');
-var Action = require('../actions/action')
+var Action = require('../actions/action');
+
+var Timer = require('./timer');
 
 
 module.exports = React.createClass({
+    getInitialState: function () {
+        return {
+            task: this.props.task
+        };
+    },
+
     handleDeleteClick: function (event) {
         $.ajax({
             url: 'http://localhost:3000/api/me/tasks/' + this.props.task.id,
@@ -18,28 +26,19 @@ module.exports = React.createClass({
         });
     },
 
-    handleDurationClick: function (event) {
-        $.ajax({
-            url: 'http://localhost:3000/api/me/tasks/' + this.props.task.id + '/startTimer',
-            type: 'POST',
-            contentType: 'application/json',
-            success: function (response) {
-            }
-        });
-    },
 
     render: function() {
-        console.log('rendering..');
         return (
             <div className={'task-item row'}>
                 <div className={'col-xs-4'}>
-                    {this.props.task.title}
+                    {this.state.task.title}
                 </div>
                 <div className={'col-xs-4'}>
-                    {this.props.task.context}
+                    {this.state.task.context}
                 </div>
-                <div className={'col-xs-2'} onClick={this.handleDurationClick}>
-                    {this.props.task.duration}
+                <div className={'col-xs-2'}>
+                    //<Timer task={this.state.task} />
+                    {this.state.task.duration}
                 </div>
                 <div className={'col-xs-2'} onClick={this.handleDeleteClick}>
                     x

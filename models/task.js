@@ -21,12 +21,26 @@ var modelInit = function(sequelize, DataTypes) {
         },
         instanceMethods: {
             startTimer: function () {
-                this.state = TASK_STATES.RUNNING;
-                return this.save();
+                var self = this;
+                if (this.state === TASK_STATES.NOT_RUNNING) {
+                    this.state = TASK_STATES.RUNNING;
+                    this.timer = setInterval(function () {
+                        self.duration--;
+                        if (self.duration === 0) {
+                            self.stopTimer();
+                        } else {
+                            self.save();
+                        } 
+                    }, 1000);
+                    console.log('timer Started');
+                    return this.save();
+                }
             },
 
             stopTimer: function () {
+                console.log('timer stopped');
                 this.state = TASK_STATES.NOT_RUNNING;
+                clearInterval(this.timer);
                 return this.save();
             }
         }

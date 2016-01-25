@@ -59,7 +59,6 @@ var apiMe = {
         }).then(function (updatedTask) {
             res.json(updatedTask);
         });
-
     }
 };
 
