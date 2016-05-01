@@ -5,7 +5,6 @@ var React = require('react');
 var Store = require('../stores/store');
 var Action = require('../actions/action');
 
-var Timer = require('./timer');
 
 
 module.exports = React.createClass({
@@ -37,7 +36,6 @@ module.exports = React.createClass({
                     {this.state.task.context}
                 </div>
                 <div className={'col-xs-2'}>
-                    //<Timer task={this.state.task} />
                     {this.state.task.duration}
                 </div>
                 <div className={'col-xs-2'} onClick={this.handleDeleteClick}>
