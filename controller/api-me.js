@@ -43,22 +43,6 @@ var apiMe = {
                 id: req.params.id
             });
         });
-    },
-
-    startTimer: function (req, res) {
-        Task.findById(req.params.id).then(function (task) {
-            return task.startTimer();
-        }).then(function (updatedTask) {
-            res.json(updatedTask);
-        });
-    },
-
-    stopTimer: function (req, res) {
-        Task.findById(req.params.id).then(function (task) {
-            return task.stopTimer();
-        }).then(function (updatedTask) {
-            res.json(updatedTask);
-        });
     }
 };
 

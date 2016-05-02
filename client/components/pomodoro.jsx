@@ -1,6 +1,5 @@
 /** @jsx React.DOM */
 'use strict'
-var $ = require('jquery');
 var _ = require('lodash');
 var React = require('react');
 

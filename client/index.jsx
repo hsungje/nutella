@@ -1,8 +1,8 @@
 /** @jsx React.DOM */
 'use strict'
 var ReactDOM = require('react-dom');
-var Pomodoro = require('./components/pomodoro.jsx');
+var Main = require('./components/main.jsx');
 require('bootstrap-loader');
 
 
-ReactDOM.render(<Pomodoro />, document.getElementById('content'));
+ReactDOM.render(<Main />, document.getElementById('content'));
