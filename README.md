@@ -1,6 +1,6 @@
 # nutella
 ### Initialization
-1. Clone this repo `$ git clone git@github.com:donkeysmash/nutella.git`.
+1. Clone this repo `$ git clone git@github.com:hsungje/nutella.git`.
 2. Install postgres `$ brew install postgres`.
 3. Start Postgres `$ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start`
 	- you can stop it by `$ pg_ctl -D /usr/local/var/postgres stop -s -m fast`
